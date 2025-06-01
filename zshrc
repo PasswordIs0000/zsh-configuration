@@ -19,7 +19,7 @@ eval "$(pyenv init - zsh)"
 eval "$(pyenv virtualenv-init -)"
 
 # programs in my home directory
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # powerlevel10k theme
 source ~/.zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
