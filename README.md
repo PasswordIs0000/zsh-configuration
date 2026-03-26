@@ -17,7 +17,7 @@ ln -s $PWD/zshrc $HOME/.zshrc
 ln -s $PWD/spaceshiprc.zsh $HOME/.spaceshiprc.zsh
 ```
 
-## Themes
+## Prompt
 - [spaceship-prompt](https://github.com/spaceship-prompt/spaceship-prompt)
 
 ## Plugins
