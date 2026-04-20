@@ -37,6 +37,7 @@ bindkey "^[[3~" delete-char
 
 # function to update zsh plugins and themes
 zsh_update() {
+  local DIR=""
   if command -v git &> /dev/null; then
     for DIR in $HOME/.zsh/*; do
       if [[ -d $DIR ]]; then
