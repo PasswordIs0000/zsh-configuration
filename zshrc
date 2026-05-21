@@ -35,6 +35,11 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 
+# lm studio integration
+if [[ -d $HOME/.lmstudio ]]; then
+  export PATH="$PATH:$HOME/.lmstudio/bin"
+fi
+
 # function to update zsh plugins and themes
 zsh_update() {
   local DIR=""
