@@ -35,8 +35,13 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 
+# add ~/.local/bin to the path
+if [[ -d $HOME/.local/bin  && ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+  export PATH="$PATH:$HOME/.local/bin"
+fi
+
 # lm studio integration
-if [[ -d $HOME/.lmstudio ]]; then
+if [[ -d $HOME/.lmstudio/bin  && ":$PATH:" != *":$HOME/.lmstudio/bin:"* ]]; then
   export PATH="$PATH:$HOME/.lmstudio/bin"
 fi
 
