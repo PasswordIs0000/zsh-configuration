@@ -10,16 +10,6 @@ unset HISTFILE
 # i like nano as my default editor
 export EDITOR=/usr/bin/nano
 
-# python environments using pyenv
-if [[ -d $HOME/.pyenv ]]; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-  if command -v pyenv &> /dev/null; then
-    eval "$(pyenv init - zsh)"
-    eval "$(pyenv virtualenv-init -)"
-  fi
-fi
-
 # spaceship prompt
 [[ -d $HOME/.zsh/spaceship-prompt ]] && source "$HOME/.zsh/spaceship-prompt/spaceship.zsh"
 
