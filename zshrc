@@ -27,25 +27,25 @@ bindkey "^[[3~" delete-char
 
 # add ~/.local/bin to the path
 if [[ -d $HOME/.local/bin  && ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
-  export PATH="$PATH:$HOME/.local/bin"
+    export PATH="$PATH:$HOME/.local/bin"
 fi
 
 # lm studio integration
 if [[ -d $HOME/.lmstudio/bin  && ":$PATH:" != *":$HOME/.lmstudio/bin:"* ]]; then
-  export PATH="$PATH:$HOME/.lmstudio/bin"
+    export PATH="$PATH:$HOME/.lmstudio/bin"
 fi
 
 # function to update zsh plugins and themes
 zsh_update() {
-  local DIR=""
-  if command -v git &> /dev/null; then
-    for DIR in $HOME/.zsh/*; do
-      if [[ -d $DIR ]]; then
-        echo "Updating $DIR"
-        git -C $DIR pull
-      fi
-    done
-  else
-    echo "No git command available!"
-  fi
+    local DIR=""
+    if command -v git &> /dev/null; then
+        for DIR in $HOME/.zsh/*; do
+        if [[ -d $DIR ]]; then
+            echo "Updating $DIR"
+            git -C $DIR pull
+        fi
+        done
+    else
+        echo "No git command available!"
+    fi
 }
