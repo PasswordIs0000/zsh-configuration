@@ -40,10 +40,10 @@ zsh_update() {
     local DIR=""
     if command -v git &> /dev/null; then
         for DIR in $HOME/.zsh/*; do
-        if [[ -d $DIR ]]; then
-            echo "Updating $DIR"
-            git -C $DIR pull
-        fi
+            if [[ -d $DIR ]]; then
+                echo "Updating $DIR"
+                git -C $DIR pull
+            fi
         done
     else
         echo "No git command available!"
